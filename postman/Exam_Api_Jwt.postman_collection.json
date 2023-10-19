@@ -1,0 +1,850 @@
+{
+	"info": {
+		"_postman_id": "031d021e-19f9-495e-bea1-9b5f8d541128",
+		"name": "Exam_Api_Jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29528264"
+	},
+	"item": [
+		{
+			"name": "create user 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idUser1\",pm.response.json().id);\r",
+							"pm.environment.set(\"user1\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Test create User1\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"bobo@gmail.com\",\r\n  \"roles\": [\r\n  ],\r\n  \"password\": \"$2y$13$/e6zvMCKKQ8oOqjO97C5KuVOHovccJtBKk/sM4dW95Rkrwq3CISOO\",\r\n  \"firstname\": \"Bobo\",\r\n  \"lastname\": \"John\",\r\n  \"verified\": true,\r\n  \"isVerified\": true,\r\n  \"createdAt\": \"2023-10-19T11:05:52.509Z\",\r\n  \"updatedAt\": \"2023-10-19T11:05:52.509Z\"\r\n  \r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idUser2\",pm.response.json().id);\r",
+							"pm.environment.set(\"user2\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Test create User2\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"hakiza@gmail.com\",\r\n  \"roles\": [\r\n  ],\r\n  \"password\": \"$2y$13$7oQ73NRYq7DnCCsNkUKFyOSBmiPt4/EuzOAkvrTjQi6SoHi5l/g1q\",\r\n  \"firstname\": \"Hakiza\",\r\n  \"lastname\": \"Joshua\",\r\n  \"verified\": true,\r\n  \"createdAt\": \"2023-10-19T11:05:52.509Z\",\r\n  \"updatedAt\": \"2023-10-19T11:05:52.509Z\"\r\n  \r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idAdmin\",pm.response.json().id);\r",
+							"pm.environment.set(\"admin\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Test Admin\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"dndayiragije95@gmail.com\",\r\n  \"roles\": [\r\n      \"ROLE_ADMIN\"\r\n  ],\r\n  \"password\": \"$2y$13$qFgP.fQzdPS6QxPOqzcTrOGGtm67hI9A37QJVuqBvm0FLCmVU.sga\",\r\n  \"firstname\": \"Désiré\",\r\n  \"lastname\": \"NDAYIRAGIJE\",\r\n  \"verified\": true,\r\n  \"createdAt\": \"2023-10-19T11:05:52.509Z\",\r\n  \"updatedAt\": \"2023-10-19T11:05:52.509Z\"\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create user 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idUser4\",pm.response.json().id);\r",
+							"pm.environment.set(\"user4\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Test User4\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"romeo95@gmail.com\",\r\n  \"roles\": [\r\n     \r\n  ],\r\n  \"password\": \"$2y$13$zh/PVwPojO2Y72MfFbLa3uj9UXPzxnMXU1zmkTRujEbfsQpWo9PqC\",\r\n  \"firstname\": \"Roméo\",\r\n  \"lastname\": \"BADOGOMBA\",\r\n  \"verified\": true,\r\n  \"createdAt\": \"2023-10-19T11:05:52.509Z\",\r\n  \"updatedAt\": \"2023-10-19T11:05:52.509Z\"\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create user 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idUser5\",pm.response.json().id);\r",
+							"pm.environment.set(\"user5\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Test User5\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"jones95@gmail.com\",\r\n  \"roles\": [\r\n     \r\n  ],\r\n  \"password\": \"$2y$13$ESYGBedQHU7sKp7OQxkYOu2VQzKxx6H4vCVUhX1ekVwqB/YERQD2K\",\r\n  \"firstname\": \"Johnes\",\r\n  \"lastname\": \"NKUNZIMANA\",\r\n  \"verified\": true,\r\n  \"createdAt\": \"2023-10-19T11:05:52.509Z\",\r\n  \"updatedAt\": \"2023-10-19T11:05:52.509Z\"\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "try list of users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test try list of users\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "try delete user 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test delete user 4\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}api/users/{{idUser4}}"
+			},
+			"response": []
+		},
+		{
+			"name": "login with user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"token1\",pm.response.json().token);\r",
+							"pm.test(\"Test token1\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{user1}}\",\r\n  \"password\": \"Bobo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/login_check"
+			},
+			"response": []
+		},
+		{
+			"name": "Create video 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo1\",pm.response.json().id);\r",
+							"pm.test(\"Test Create Video1\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Confirm\",\r\n  \"description\": \"KIKI TOURE Tu M'as Eu (Official Video 4K)\",\r\n  \"createdAt\": \"2023-10-19T12:23:00.201Z\",\r\n  \"updatedAt\": \"2023-10-19T12:23:00.201Z\",\r\n  \"user\": \"/api/users/{{idUser1}}\",\r\n  \"videoLink\": \"https://www.youtube.com/watch?v=H3kIPBpxsyM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos"
+			},
+			"response": []
+		},
+		{
+			"name": "Create video 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo2\",pm.response.json().id);\r",
+							"pm.test(\"Test Create Video2\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"NDAKWIZIGIYE\",\r\n  \"description\": \"NDAKWIZIGIYE - Redemption Voice Canada ft Redemption Voice Burundi\",\r\n   \"createdAt\": \"2023-10-19T12:26:47.560Z\",\r\n  \"updatedAt\": \"2023-10-19T12:26:47.560Z\",\r\n  \"user\": \"/api/users/{{idUser2}}\",\r\n  \"videoLink\": \"https://www.youtube.com/watch?v=SCWQjRnH-ug\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos"
+			},
+			"response": []
+		},
+		{
+			"name": "Create video 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo3\",pm.response.json().id);\r",
+							"pm.test(\"Test Create Video3\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"UMUKUBITO\",\r\n  \"description\": \"Ubutumwa bwa KIRIKOU kuri DOUBLE JAY naba DIASPORA//Abipfuza ko dutandukana//Abantu bigira IMANA\",\r\n    \"createdAt\": \"2023-10-19T12:30:39.883Z\",\r\n  \"updatedAt\": \"2023-10-19T12:30:39.883Z\",\r\n  \"user\": \"/api/users/{{idUser4}}\",\r\n  \"videoLink\": \"https://www.youtube.com/watch?v=W1pvgiWRiag\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos"
+			},
+			"response": []
+		},
+		{
+			"name": "list of videos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test list of videos\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos"
+			},
+			"response": []
+		},
+		{
+			"name": "watch video 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test watch Video 2\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos/{{idVideo2}}"
+			},
+			"response": []
+		},
+		{
+			"name": "update video 1 with Put",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test Update video with Put\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Update TU M AS EU By Put\",\r\n  \"description\": \"KIKI TOURE Tu M'as Eu (Official Video 4K)\",\r\n  \"createdAt\": \"2023-10-19T12:38:12.751Z\",\r\n  \"updatedAt\": \"2023-10-19T12:38:12.751Z\",\r\n  \"user\": \"/api/users/{{idUser1}}\",\r\n  \"videoLink\": \"https://www.youtube.com/watch?v=H3kIPBpxsyM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos/{{idVideo1}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete video 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo3\");\r",
+							"pm.test(\"Test delete video 3\",function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos/{{idVideo3}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Bonus Essaie Update user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Test Bonus Essaie Update user 2\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/merge-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"kakunze\",\r\n  \"lastname\": \"john\",\r\n  \"verified\": true,\r\n  \"createdAt\": \"2023-10-19T12:51:21.508Z\",\r\n  \"updatedAt\": \"2023-10-19T12:51:21.508Z\",\r\n  \"imageName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/users/{{idUser2}}"
+			},
+			"response": []
+		},
+		{
+			"name": "login with admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"tokenAdmin\",pm.response.json().token);\r",
+							"pm.test(\"Test login with admin\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{admin}}\",\r\n  \"password\": \"Desire@2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/login_check"
+			},
+			"response": []
+		},
+		{
+			"name": "watch users 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test watch Users 4\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{tokenAdmin}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/users/{{idUser4}}"
+			},
+			"response": []
+		},
+		{
+			"name": "update user 1 with Patch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Test Bonus Essaie Update user 2\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{tokenAdmin}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/merge-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lastname\": \"Yohani\",\r\n  \"friendWith1\": [\r\n    \"/api/users/{{idUser2}}\"\r\n  ],\r\n   \"friendWith2\": [\r\n    \"/api/users/{{idUser5}}\"\r\n  ],\r\n  \"friendWith3\": [\r\n    \"/api/users/{{idAdmin}}\"\r\n  ]\r\n \r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/users/{{idUser1}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idUser2\");\r",
+							"pm.environment.set(\"user2\");\r",
+							"pm.test(\"Test delete user 2\",function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{tokenAdmin}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/users/{{idUser2}}"
+			},
+			"response": []
+		},
+		{
+			"name": "list of video",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test list of video\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{tokenAdmin}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}api/videos"
+			},
+			"response": []
+		}
+	]
+}
